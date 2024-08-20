@@ -1,5 +1,5 @@
 class Solution {
-    public int shipWithinDays(int[] weights, int D) {
+    public int shipWithinDays(int[] weights, int d) {
         int minCap = 0;
         int maxCap = 0;
 
@@ -20,7 +20,7 @@ class Solution {
                 }
                 sum += w;
             }
-            if (days > D) {
+            if (days > d) {
                 minCap = mid + 1;
             }
             else {
