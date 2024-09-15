@@ -1,24 +1,24 @@
 class Solution {
     public double myPow(double x, int n) {
-        long exp = (long) n;
+        long exponent = (long) n;
 
-        if (exp < 0) {
-            exp = -exp;
+        if (exponent < 0) {
+            exponent = -exponent;
             x = 1 / x;
         }
-        return myPow_(x, exp);
+        return myPow_(x, exponent);
     }
 
-    private double myPow_(double x, long exp) {
-        if (exp == 0) {
+    private double myPow_(double x, long exponent) {
+        if (exponent == 0) {
             return 1;
         }
 
-        if (exp % 2 == 0) {
-            return myPow_(x * x, exp / 2);
+        if (exponent % 2 == 0) {
+            return myPow_(x * x, exponent / 2);
         }
         else {
-            return myPow_(x * x, exp / 2) * x;
+            return myPow_(x * x, exponent / 2) * x;
         }
     }
 }
